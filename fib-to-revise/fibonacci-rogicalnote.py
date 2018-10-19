@@ -6,9 +6,15 @@ Created on Fri Oct 12 16:57:19 2018
 """
 def fib(n):
     if n >= 2:
-        return fib(n-1) + fib(n-2)
-    else:
+        a = 0
+        b = 1
+        for i in range(n - 1):
+            a,b = b,a+b
+        return b
+    elif n == 1:
         return 1
+    else:
+        return 0
 print(fib(2018))
 
 
